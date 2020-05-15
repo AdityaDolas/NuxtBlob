@@ -1,72 +1,69 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        NuxtBlog
-      </h1>
-      <h2 class="subtitle">
-        Blog
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+  <section id="posts">
+    <PostPreview
+      v-for="post in posts"
+      :key="post.id"
+      :title="post.title"
+      :excerpt="post.git1"
+      :git2="post.git2"
+      :git3="post.git3"
+      :git4="post.git4"
+      :git5="post.git5"
+      :git6="post.git6"
+      :git7="post.git7"
+      :git8="post.git8"
+      :git9="post.git9"
+      :git10="post.git10"
+      :thumbnailImage="post.thumbnailUrl"
+      :id="post.id"
+
+    />
+  </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
+import PostPreview from "@/components/Blog/PostPreview";
 export default {
   components: {
-    Logo
+    PostPreview
+  },
+  data() {
+    return {
+      posts: [
+        {
+          title: "Top 10 git Commands",
+          previewText: "hi",
+          git1: "1 - git init",
+          git2: "2 - git add .",
+          git3: '3 - git commit -m "FC"',
+          git4: "4 - git stash",
+          git5: "5 - git stash pop",
+          git6: "6 - git log --oneline",
+          git7: "7 - git merge",
+          git8: "8 - git branch",
+          git9: "9 - git checkout",
+          git10: "10 - git checkout -b branch_name",
+          thumbnailUrl:
+            "https://github.blog/wp-content/uploads/2020/03/git-2-26.png?fit=1200%2C630",
+          id: "a-new-beginning"
+        }
+      ]
+    };
   }
-}
+};
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
+<style scoped>
+#posts {
+  padding-top: 0rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  flex-direction: column;
 }
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+@media (min-width: 35rem) {
+  #posts {
+    flex-direction: row;
+  }
 }
 </style>
