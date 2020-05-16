@@ -8,15 +8,6 @@
       <div class="post-preview-content">
         <h1>{{ title }}</h1>
         <p>{{ excerpt }}</p>
-        <p>{{git2}}</p>
-        <p>{{git3}}</p>
-        <p>{{git4}}</p>
-        <p>{{git5}}</p>
-        <p>{{git6}}</p>
-        <p>{{git7}}</p>
-        <p>{{git8}}</p>
-        <p>{{git9}}</p>
-        <p>{{git10}}</p>
       </div>
     </article>
   </nuxt-link>
@@ -32,42 +23,6 @@ export default {
     excerpt: {
       type: String,
       required: true
-    },
-    git2:{
-        type: String,
-        required: true
-    },
-    git3:{
-        type: String,
-        required: true
-    },
-    git4:{
-        type: String,
-        required: true
-    },
-    git5:{
-        type: String,
-        required: true
-    },
-    git6:{
-        type: String,
-        required: true
-    },
-    git7:{
-        type: String,
-        required: true
-    },
-    git8:{
-        type: String,
-        required: true
-    },
-    git9:{
-        type: String,
-        required: true
-    },
-    git10:{
-        type: String,
-        required: true
     },
     thumbnailImage: {
       type: String,
